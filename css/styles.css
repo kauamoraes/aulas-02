@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --fundo-da-pagina: #f9fafb;
+  --header-e-footer: #1e3a8a;
+  --botoes-principais: #2563eb;
+  --hover-botoes: #1e40af;
+  --botoes-secundarios-ou-detalhes: #f59e0b;
+  --texto: #1f2937;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fundo-da-pagina);
+  color: var(--texto);
+}
+
+/* Index.html */
+
+.header {
+  background-color: var(--header-e-footer);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+ul li a {
+  color: white;
+  font-weight: bold;
+}
+
+.hero {
+  background-image: url("../imagens/pexels-chevanon-1108099.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.hero .btn-primary {
+  background-color: var(--botoes-principais);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.hero .btn-primary:hover {
+  background-color: var(--hover-botoes);
+  transition: all 0.3s ease;
+}
+
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.about .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.about img {
+  width: 400px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.footer {
+  background-color: var(--header-e-footer);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Projetos da ONG */
+.projects {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: var(--texto);
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-card-01 img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-card-01 {
+  color: black;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.project-card-02 {
+  color: black;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.project-card-02 img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.donation {
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.donation .btn-primary {
+  background-color: var(--botoes-principais);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.donation .btn-primary:hover {
+  background-color: var(--hover-botoes);
+  transition: all 0.3s ease;
+}   
+
+/* Cadastro */
+
+.form-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--header-e-footer);
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-section fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.form-section legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: var(--botoes-principais);
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+  outline: none;
+  border-color: var(--botoes-principais);
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+.form-section button.btn-primary {
+  background-color: var(--botoes-principais);
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button.btn-primary:hover {
+  background-color: var(--hover-botoes);
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+}

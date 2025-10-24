@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Patas da Esperança</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">🐾 Patas da Esperança</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" class="active">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <div class="container">
+        <h2>Formulário de Cadastro</h2>
+        <form id="cadastroForm">
+          <fieldset class="cadastro-1">
+            <legend>Dados Pessoais</legend>
+            <label>Nome Completo *</label>
+            <input type="text" name="nome" required>
+
+            <label>E-mail *</label>
+            <input type="email" name="email" required>
+
+            <label>CPF *</label>
+            <input type="text" name="cpf" id="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+
+            <label>Telefone *</label>
+            <input type="tel" name="telefone" id="telefone" required placeholder="(00) 00000-0000">
+
+            <label>Data de Nascimento *</label>
+            <input type="date" name="nascimento" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço</legend>
+            <label>CEP *</label>
+            <input type="text" name="cep" id="cep" required pattern="\d{5}-\d{3}">
+
+            <label>Cidade *</label>
+            <input type="text" name="cidade" required>
+
+            <label>Estado *</label>
+            <input type="text" name="estado" required>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2024 Patas da Esperança</small>
+    </div>
+  </footer>
+
+  <script>
+    // Máscaras simples
+    document.getElementById("cpf").addEventListener("input", e => {
+      e.target.value = e.target.value
+        .replace(/\D/g, "")
+        .replace(/(\d{3})(\d)/, "$1.$2")
+        .replace(/(\d{3})(\d)/, "$1.$2")
+        .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    });
+
+    document.getElementById("telefone").addEventListener("input", e => {
+      e.target.value = e.target.value
+        .replace(/\D/g, "")
+        .replace(/(\d{2})(\d)/, "($1) $2")
+        .replace(/(\d{5})(\d{4})$/, "$1-$2");
+    });
+
+    document.getElementById("cep").addEventListener("input", e => {
+      e.target.value = e.target.value
+        .replace(/\D/g, "")
+        .replace(/(\d{5})(\d{3})$/, "$1-$2");
+    });
+  </script>
+</body>
+</html>

@@ -116,5 +116,5 @@ https://github.com/kauamoraes/aulas-02.git
 
 Concluído / Em desenvolvimento
 ```bash
-Em desenvolvimento
+Concluido
 ```
